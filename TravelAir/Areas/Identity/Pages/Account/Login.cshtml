@@ -1,0 +1,100 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<head>
+
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="form-decor">
+
+            <form id="account" method="post">
+
+                <div class = "form-header">
+                    <img src = "/images/decor/TA_Logo.jpg" />
+                    <h2>Log In To Your TravelAir Account</h2>
+                </div> 
+
+                <hr class = "form-element"/>
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-floating form-element">
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                    <label asp-for="Input.Email" class="form-label"></label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-floating form-element">
+                    <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+                    <label asp-for="Input.Password" class="form-label"></label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class = "form-btn-part">
+                    <button id="registerSubmit" type="submit" class="btn btn-lg btn-primary login-btn">Log In</button>
+                    <a href = "">
+                          <button id="registerSubmit" type="button" class="btn btn-lg btn-primary login-back-btn">Back</button>
+                    </a>
+                </div>
+
+                <div class = "reg-link">
+                    <p>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                    </p>
+                </div>
+
+            </form>
+
+        </div>
+
+        <section>
+         
+            @{
+
+                if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                {
+                   
+                }
+                else
+                {
+                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+
+                        <div>
+                            <p>
+                                @foreach (var provider in Model.ExternalLogins!)
+                                {
+                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                }
+                            </p>
+                        </div>
+
+                    </form>
+                }
+
+            }
+
+        </section>
+
+    </div>
+
+    <footer>
+
+        <div class = "footer-block">
+            <p>TravelAir Inc.</p>
+            <img src = "/images/decor/TA_Logo.jpg"/>
+        </div>
+
+    </footer>
+
+</body>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

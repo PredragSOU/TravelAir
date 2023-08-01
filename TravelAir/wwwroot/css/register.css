@@ -1,0 +1,141 @@
+:root{
+
+    /* -------- Colors -------- */
+
+    --body-color: #E4E9F7;
+    --section-color: #FFF;
+    --primary-color: #012d4a;
+    --secondary-color: #1f96ff;
+    --text-color: #707070;
+    --separator-color: #CDCDCD;
+
+    /* -------- Transition -------- */
+
+    --tran-03-sec: all 0.3s ease;
+
+}
+
+.main{
+    padding: 200px 100px 160px 100px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+}
+
+
+/* -------- Register Form -------- */
+
+
+.form-decor{
+    padding:30px;
+    width: 40vw;
+    height: 100%;
+    background: var(--section-color);
+    align-content: center;
+    border-radius: 20px;
+}
+
+.form-decor .form-element{
+    margin: 20px 0px 20px 0px;
+}
+
+
+.form-header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.form-header img{
+    width: 100px;
+    height: 100px;
+}
+
+.form-decor h2{
+    width: 100%;
+    text-align: right;
+    padding: 0px 0px 0px 20px;
+    height: 100%;
+    border-radius: 10px;
+    font-size: 40px;
+    color: var(--text-color);
+}
+
+.form-btn-part{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-btn-part a{
+    width: 49%;
+}
+
+.register-btn{
+    height: 60px;
+    border-radius: 10px;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 49%;
+}
+
+.register-btn:hover{
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.register-back-btn{
+    height: 60px;
+    border-radius: 10px;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 100%;
+}
+
+.register-back-btn:hover {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+
+/* -------- Footer -------- */
+
+
+.footer-block{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    background: var(--primary-color);
+    padding: 20px;
+    align-items: center;
+    justify-content: right;
+    bottom: 0;
+}
+
+.footer-block p{
+    width: contain;
+    background: var(--primary-color);
+    font-size: 20px;
+    color: var(--section-color);
+    text-align: right;
+    align-items: flex-end;
+    margin: 0px;
+}
+
+.footer-block img{
+    width: 70px;
+    align-items: flex-end;
+    margin-left: 10px;
+    border-radius:10px;
+}
+
+
+
+
+
+
+
+
+
+

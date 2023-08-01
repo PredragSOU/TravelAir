@@ -1,0 +1,243 @@
+﻿:root{
+    /* -------- Colors -------- */
+
+    --body-color: #E4E9F7;
+    --section-color: #FFF;
+    --primary-color: #012d4a;
+    --secondary-color: #1f96ff;
+    --text-color: #707070;
+    --separator-color: #CDCDCD;
+
+    /* -------- Transition -------- */
+
+    --tran-03-sec: all 0.3s ease;
+
+}
+
+body{
+    height: 100vh;
+    background: var(--body-color);
+    left: 180px;
+}
+
+/* -------- Section -------- */
+
+.main{
+    padding: 123px 100px 40px 100px;
+    margin-bottom: 40px;
+}
+
+/* -------- Info Panels -------- */
+
+
+.instruction-panel{
+    width: 100%;
+    height: 100%;
+    margin: 30px 0px 40px 0px;
+}
+
+.panel-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-panel {
+    width: calc(100% / 3);
+    height: inherit;
+    padding: 30px;
+    background: var(--section-color);
+    border-radius: 10px;
+}
+
+.query-info {
+    margin: 0px 20px 0px 20px;
+}
+
+.info-panel p {
+    display: block;
+    margin: 0px;
+    text-align: justify;
+}
+
+.info-panel h5 {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info-panel i{
+    font-size:50px;
+    margin-bottom: 10px;
+    background: var(--primary-color);
+    color: var(--section-color);
+    padding:4px;
+    border-radius:10px;
+}
+
+
+/* -------- TravelAir Desccription -------- */
+
+
+.additional-info{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: var(--section-color);
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.additional-info .image-part{
+    display: flex;
+    justify-content: space-between;
+}
+
+.additional-info img{
+    width: 49%;
+    height: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 4px solid;
+    border-color: var(--secondary-color);
+}
+
+.additional-info p{
+    margin: 0px;
+    padding: 0px;
+    text-align: justify;
+}
+
+
+/* -------- Gallery -------- */
+
+
+.destinations{
+    padding: 30px;
+    width: 100%;
+    height: contain;
+    background: var(--section-color);
+    border-radius: 10px;
+}
+
+.places-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.places-header i{
+    font-size: 50px;
+    background: var(--primary-color);
+    color: var(--section-color);
+    padding:4px;
+    border-radius:10px;
+    margin-right: 10px;
+}
+
+.places-header h2{
+    font-size:40px;
+}
+
+.destinations hr{
+    margin-bottom: 20px;
+}
+
+.gallery{
+    justify-content: space-between;
+    box-sizing: border-box;
+    display: inline-grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    width:100%; 
+    height: 250px;
+   
+}
+
+.img-container{
+    display: flex;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid;
+    border-color: var(--secondary-color);
+ 
+}
+
+.img-container a{
+    display: flex;
+    width:100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.img-ny{
+    background-image: linear-gradient(to right, rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), url(/images/decor/Gallery_NY.jpg);
+}
+
+.img-ny:hover{
+    background-image: url(/images/decor/Gallery_NY.jpg);
+}
+
+.img-rome{
+    background-image: linear-gradient(to right, rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), url(/images/decor/Gallery_Rome.jpg);
+}
+
+.img-rome:hover{
+    background-image: url(/images/decor/Gallery_Rome.jpg);
+}
+
+.img-sydney{
+    background-image: linear-gradient(to right, rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), url(/images/decor/Gallery_Sydney.jpg);
+}
+
+.img-sydney:hover{
+    background-image: url(/images/decor/Gallery_Sydney.jpg);
+}
+
+.img-tokyo{
+    background-image: linear-gradient(to right, rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), url(/images/decor/Gallery_Tokyo.jpg);
+}
+
+.img-tokyo:hover{
+    background-image: url(/images/decor/Gallery_Tokyo.jpg);
+}
+
+
+/* -------- Footer -------- */
+
+
+.footer-block {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    background: var(--primary-color);
+    padding: 20px;
+    align-items: center;
+    justify-content: right;
+}
+
+
+.footer-block p {
+    width: contain;
+    background: var(--primary-color);
+    font-size: 20px;
+    color: var(--section-color);
+    text-align: right;
+    align-items: flex-end;
+    margin: 0px;
+}
+
+.footer-block img {
+    width: 70px;
+    align-items: flex-end;
+    margin-left: 10px;
+}
+

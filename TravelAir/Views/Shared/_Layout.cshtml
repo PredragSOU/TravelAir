@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - TravelAir</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/TravelAir.styles.css" asp-append-version="true" />
+  
+        <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+         <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    </head>
+
+    <body>
+
+        <nav class = "sidebar sidebar-border">
+
+            <div class = "menu-bar">
+
+                <div class = "menu">
+
+                    <ul class = "menu-links">
+
+                        <li class = "nav-llnk">
+                            <i class='bx bx-menu icon menu-icon'></i> 
+                        </li>
+
+                        <hr class = "separator"/>
+
+                        <li class = "nav-llnk">
+                            <a href = @Url.Action("index", "Home")>
+                                <i class='bx bx-home icon'></i>
+                                <span class = "text nav-text">Home</span>
+                            </a>
+                        </li>           
+                        <li class = "nav-llnk">
+                            <a href = "">
+                                <i class='bx bx-user-circle icon'></i>
+                                <span class = "text nav-text">Sign in</span>
+                            </a>
+                        </li>
+                        <li class = "nav-llnk">
+                            <a href = "">
+                                <i class='bx bx-log-in-circle icon'></i>
+                                <span class = "text nav-text">Log In</span>
+                            </a>
+                        </li>
+
+                        <hr class = "separator"/>
+
+                        <li class = "nav-llnk">
+                            <a href = "#">
+                                <i class='bx bxs-plane-alt icon'></i>
+                                <span class = "text nav-text">Flights</span>
+                            </a>
+                        </li>
+
+                        <hr class = "separator"/>
+
+                    </ul>
+
+                    <div class = "bottom-content">
+
+                        <ul class = "menu-links">
+
+                            <li class = "nav-llnk">
+                                <a href = "#" onclick="return false;">
+                                    <i class='bx bx-info-circle icon'></i>
+                                    <span class = "text nav-text">About</span>
+                                </a>
+                            </li>
+
+                        </ul>    
+                          
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+     
+        <div class = "home">
+
+            <header>
+
+                <div class = "image-text">
+                    <span class = "image">
+                        <img src = "/images/decor/TA_Logo.jpg" />
+                    </span>
+          
+
+                    <div class = "text header-text">
+                        <span class = "name">TravelAir</span>
+                        <span class = "purpose">Ticket Search</span>
+                    </div>
+                </div>
+
+            </header>
+
+        
+            @RenderBody()
+                
+
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+
+            @await RenderSectionAsync("Scripts", required: false)
+
+        </div>
+          
+    </body>
+
+</html>
