@@ -1,0 +1,64 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using TravelAir.Areas.Identity.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<html>
+
+    <head>
+          <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    </head>
+          
+    <body>
+
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <header>
+
+                <div class = "image-text">
+
+                    <span class = "image">
+                        <img src = "/images/decor/TA_Logo.jpg" />
+                    </span>
+          
+                    <div class = "text header-text">
+                        <span class = "name">TravelAir</span>
+                        <p class = "purpose">Ticket Search</p>
+                    </div>
+
+                 </div>
+                          
+                 <div class = user-info>                
+                     <span>@((await UserManager.GetUserAsync(User)).UserNameDisplay)</span>
+                     <i class = "bx bxs-user-circle icon header-icon"></i>
+                 </div>
+
+            </header>
+        }
+        else
+        {
+            <header>
+
+                <div class = "login-details">
+
+                    <div class = "image-text">
+                        <span class = "image">
+                            <img src = "/images/decor/TA_Logo.jpg" />
+                        </span>
+          
+
+                        <div class = "text header-text">
+                            <span class = "name">TravelAir</span>
+                            <span class = "purpose">Ticket Search</span>
+                        </div>
+                    </div>
+
+                </div>
+           
+            </header>
+        }
+
+    </body>
+
+</html>

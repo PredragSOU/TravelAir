@@ -1,0 +1,28 @@
+﻿<html>
+
+    <head>
+         <link rel="stylesheet" href="~/css/logout-popup.css" asp-append-version="true" />
+    </head>
+
+    <body>
+
+        <form id = "logout-popup" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+
+            <div>
+                <img src = "/images/decor/Logout_Image_two.jpg"/>
+            </div>
+
+            <div class = "logout-text">
+                <p>Are you sure you want to log out?</p>
+            </div>
+
+            <div class = "logout-buttons">
+                <button type="submit" class="">Log Out</button>
+                <div class = "cancel-button" onclick = "closePopup()">Cancel</div>
+            </div>
+                
+        </form>
+
+    </body>
+
+</html>

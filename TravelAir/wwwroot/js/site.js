@@ -11,3 +11,13 @@ const body = document.querySelector("body"),
 toggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");
 })
+
+let popup = document.getElementById("logout-popup")
+
+function openPopup() {
+    popup.classList.add("open-popup");
+}
+
+function closePopup() {
+    popup.classList.remove("open-popup");
+}

@@ -18,6 +18,7 @@ body{
     height: 100vh;
     background: var(--body-color);
     left: 180px;
+    transition: 0.3s ease;
 }
 
 /* -------- Section -------- */
@@ -47,6 +48,7 @@ body{
     padding: 30px;
     background: var(--section-color);
     border-radius: 10px;
+    box-shadow: 0px 10px 10px #707070;
 }
 
 .query-info {
@@ -77,13 +79,14 @@ body{
 /* -------- TravelAir Desccription -------- */
 
 
-.additional-info{
+.additional-info {
     width: 100%;
     height: 100%;
     border-radius: 10px;
     background: var(--section-color);
     padding: 30px;
     margin-bottom: 40px;
+    box-shadow: 0px 10px 10px #707070;
 }
 
 .additional-info .image-part{
@@ -96,8 +99,7 @@ body{
     height: 100%;
     margin-bottom: 20px;
     border-radius: 10px;
-    border: 4px solid;
-    border-color: var(--secondary-color);
+
 }
 
 .additional-info p{
@@ -110,12 +112,13 @@ body{
 /* -------- Gallery -------- */
 
 
-.destinations{
+.destinations {
     padding: 30px;
     width: 100%;
     height: contain;
     background: var(--section-color);
     border-radius: 10px;
+    box-shadow: 0px 10px 10px #707070;
 }
 
 .places-header{
@@ -147,11 +150,17 @@ body{
     display: inline-grid;
     grid-template-columns: 23% 23% 23% 23%;
     width:100%; 
-    height: 250px;
-   
+    height: 250px; 
 }
 
-.img-container{
+.gallery-separator{
+    width: 100%;
+    border: 1px solid;
+    border-color: var(--separator-color);
+    margin: 20px 0px 20px 0px;
+}
+
+.img-container {
     display: flex;
     width: 100%;
     background-size: cover;
@@ -159,9 +168,7 @@ body{
     border-radius: 10px;
     align-items: center;
     justify-content: center;
-    border: 4px solid;
-    border-color: var(--secondary-color);
- 
+    box-shadow: 0px 10px 10px #707070;
 }
 
 .img-container a{

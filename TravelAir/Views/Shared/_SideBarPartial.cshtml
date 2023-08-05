@@ -1,0 +1,147 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using TravelAir.Areas.Identity.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<html>
+
+    <head>
+          <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    </head>
+
+    <body>
+        
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <nav class = "sidebar sidebar-border">
+
+                <div class = "menu-bar">
+
+                    <div class = "menu">
+
+                        <ul class = "menu-links">
+
+                            <li class = "nav-llnk">
+                                <i class='bx bx-menu icon menu-icon'></i> 
+                            </li>
+
+                            <hr class = "separator"/>
+
+                            <li class = "nav-llnk">
+                                <a asp-controller = "Home" asp-action = "Index" >
+                                    <i class='bx bx-home icon'></i>
+                                    <span class = "text nav-text">Home</span>
+                                </a>
+                            </li>           
+                            <li class = "nav-llnk">
+                                <a asp-area="Identity" asp-page="/Account/Register">
+                                    <i class='bx bx-user-circle icon'></i>
+                                    <span class = "text nav-text">Sign in</span>
+                                </a>
+                            </li>
+                            <li type = "submit" class = "nav-llnk">
+                                <a onclick = "openPopup()">
+                                    <i class='bx bx-log-out-circle icon'></i>
+                                    <span class = "text nav-text">Log Out</span>
+                                </a>        
+                            </li>
+
+                            <hr class = "separator"/>
+
+                            <li class = "nav-llnk">
+                                <a>
+                                    <i class='bx bxs-plane-alt icon'></i>
+                                    <span class = "text nav-text">Flights</span>
+                                </a>
+                            </li>
+
+                            <hr class = "separator"/>
+
+                        </ul>
+
+                        <div class = "bottom-content">
+
+                            <ul class = "menu-links">
+
+                                <li class = "nav-llnk">
+                                    <a href = "#" onclick="return false;">
+                                        <i class='bx bx-info-circle icon'></i>
+                                        <span class = "text nav-text">About</span>
+                                    </a>
+                                </li>
+
+                            </ul>    
+                          
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </nav>
+        }
+        else
+        {
+            <nav class = "sidebar sidebar-border">
+
+                <div class = "menu-bar">
+
+                    <div class = "menu">
+
+                        <ul class = "menu-links">
+
+                            <li class = "nav-llnk">
+                                <i class='bx bx-menu icon menu-icon'></i> 
+                            </li>
+
+                            <hr class = "separator"/>
+
+                            <li class = "nav-llnk">
+                                <a asp-controller = "Home" asp-action = "Index" >
+                                    <i class='bx bx-home icon'></i>
+                                    <span class = "text nav-text">Home</span>
+                                </a>
+                            </li>           
+                            <li class = "nav-llnk">
+                                <a asp-area="Identity" asp-page="/Account/Register">
+                                    <i class='bx bx-user-circle icon'></i>
+                                    <span class = "text nav-text">Sign in</span>
+                                </a>
+                            </li>
+                            <li class = "nav-llnk">
+                                <a asp-area="Identity" asp-page="/Account/Login">
+                                    <i class='bx bx-log-in-circle icon'></i>
+                                    <span class = "text nav-text">Log In</span>
+                                </a>
+                            </li>
+
+                            <hr class = "separator"/>
+
+                        </ul>
+
+                        <div class = "bottom-content">
+
+                            <ul class = "menu-links">
+
+                                <li class = "nav-llnk">
+                                    <a href = "#" onclick="return false;">
+                                        <i class='bx bx-info-circle icon'></i>
+                                        <span class = "text nav-text">About</span>
+                                    </a>
+                                </li>
+
+                            </ul>    
+                          
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </nav>
+        }
+
+    </body>
+
+</html>  
