@@ -1,0 +1,93 @@
+﻿@model IEnumerable<TravelAir.Models.FlightOffer>
+
+<head>
+    <link rel="stylesheet" href="~/css/flight-offer-index.css" asp-append-version="true" />
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<div id = "top-content">
+
+
+
+</div>
+
+
+ 
+<div class = "main">
+
+    <div id = "create-div">
+        <a id = "create-icon-holder" asp-action = "Create"><i class='bx bxs-plus-circle icon'></i></a>  
+    </div>
+
+      <div id = "offers-section">
+           @foreach(var item in Model){
+
+            <div class = "offer-panel">
+
+                <div class = "main-info">
+
+                    <div class = "comp-part">
+                        <div class = "comp-img">
+                            <img>
+                        </div>
+                       
+                        <span>Company Name</span>
+                    </div>
+
+                    <div class = "places-dates">
+                        <span class = "places">
+                            @Html.DisplayFor(modelItem => item.Origin)&nbsp-
+                            @Html.DisplayFor(modelItem => item.Destination)
+                        </span>
+                        <span>
+                            @Html.DisplayFor(modelItem => item.DepartureDate.TimeOfDay)
+                        </span>           
+                    </div>
+
+                    <div class = "trip-length">
+                        <span>Trip Type</span>
+                        <span>Trip Length</span>
+                    </div>
+
+                </div>
+
+                <div class = "side-info">
+                    <div class = "side-info-cont">
+                        <div class = "price-part">
+                            <span>@Html.DisplayNameFor(modelItem => item.Price): @Html.DisplayFor(modelItem => item.Price)</span>
+
+                            <div class = "manage-part">
+                               <a class = "icon-link" id = "details-part" asp-action = "Details" asp-route-id="@item.Id"><i class="fa-solid fa-ellipsis icon"></i></a>
+                               <a class = "icon-link" id = "edit-part"asp-action = "Edit" asp-route-id="@item.Id"><i class="fa-solid fa-pen icon"></i></a>
+                               <a class = "icon-link" id = "delete-part" asp-action = "Delete" asp-route-id="@item.Id"><i class="fa-solid fa-xmark icon"></i></a>
+                            </div>
+
+                        </div>
+                        <span>
+                            @Html.DisplayNameFor(modelItem => item.CabinClass.Name): @Html.DisplayFor(modelItem => item.CabinClass.Name)
+                        </span>
+                         <span>
+                            Passenger:
+                        </span>
+                        <span>
+                            Quantity:
+                        </span>
+                    </div>
+               
+                    <div class = "btn-part">
+                        <button class = "offer-btn" type = "submit">View Offer</button>
+                    </div>
+                </div>
+
+            </div>
+
+        }
+      </div>
+
+       
+
+
+
+</div>
+
+

@@ -8,9 +8,29 @@ const body = document.querySelector("body"),
       toggle = document.querySelector(".menu-icon");
 
 
-toggle.addEventListener("click", () => {
+toggle.addEventListener("click", function () {
+
+    expandSidebar();
+});
+
+function expandSidebar() {
     sidebar.classList.toggle("close");
-})
+    let keepSidebar = document.querySelectorAll("sidebar.close");
+    if (keepSidebar.length === 1) {
+        localStorage.setItem("keepSidebar", "true");
+    } else {
+        localStorage.removeItem("keepSidebar");
+    }
+}
+
+function showStoredSidebar() {
+    if (localStorage.getItem("keepSidebar") === "true") {
+        sidebar.classList.add("close");
+
+    }
+}
+
+showStoredSidebar();
 
 let popup = document.getElementById("logout-popup")
 
