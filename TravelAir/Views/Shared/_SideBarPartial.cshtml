@@ -50,7 +50,7 @@
                             <hr class = "separator"/>
 
                             <li class = "nav-llnk">
-                                <a>
+                                <a asp-controller = "FlightOffer" asp-action = "Index">
                                     <i class='bx bxs-plane-alt icon'></i>
                                     <span class = "text nav-text">Flights</span>
                                 </a>
@@ -104,15 +104,31 @@
                                 </a>
                             </li>           
                             <li class = "nav-llnk">
-                                <a asp-area="Identity" asp-page="/Account/Register">
+                                <a asp-area = "Identity" asp-page="/Account/Register">
                                     <i class='bx bx-user-circle icon'></i>
                                     <span class = "text nav-text">Sign in</span>
                                 </a>
                             </li>
                             <li class = "nav-llnk">
-                                <a asp-area="Identity" asp-page="/Account/Login">
+                                <a asp-area = "Identity" asp-page="/Account/Login">
                                     <i class='bx bx-log-in-circle icon'></i>
                                     <span class = "text nav-text">Log In</span>
+                                </a>
+                            </li>
+
+                            <hr class = "separator"/>
+
+                            <li class = "nav-llnk">
+                                <a asp-controller = "FlightOffer" asp-action = "Index">
+                                    <i class='bx bxs-plane-alt icon'></i>
+                                    <span class = "text nav-text">Flights</span>
+                                </a>
+                            </li>
+
+                             <li class = "nav-llnk">
+                                <a asp-controller = "CabinClass" asp-action = "Index">
+                                   <i class='bx bx-category icon'></i>
+                                    <span class = "text nav-text">Classes</span>
                                 </a>
                             </li>
 

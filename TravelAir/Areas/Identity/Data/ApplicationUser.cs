@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
+using TravelAir.Models;
 
 namespace TravelAir.Areas.Identity.Data;
 
@@ -20,5 +21,7 @@ public class ApplicationUser : IdentityUser
 
     [Column(TypeName = "nvarchar(40)")]
     public string UserNameDisplay { get; set; }
+
+    public ICollection<AppUserFlightOffer> AppUserFlightOffers { get; set; }
 }
 

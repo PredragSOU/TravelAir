@@ -7,7 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>@ViewData["Title"] - TravelAir</title>
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/shared-layout.css" asp-append-version="true" />
+        <link rel="stylesheet" href=~/css/root.css/ asp-append-version="true">
         <link rel="stylesheet" href="~/TravelAir.styles.css" asp-append-version="true" />
   
         <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
@@ -22,10 +23,12 @@
         <partial name="_SideBarPartial.cshtml"/>
 
         <div class = "home">
-            
-            <partial name="_HeaderPartial.cshtml" />
+     
+            <partial name="_HeaderPartial.cshtml"/>
 
             @RenderBody()
+
+            <partial name ="_FooterPartial.cshtml"/>
                 
             <script src="~/lib/jquery/dist/jquery.min.js"></script>
             <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -33,6 +36,7 @@
 
             @await RenderSectionAsync("Scripts", required: false)
 
+       
         </div>
           
     </body>
