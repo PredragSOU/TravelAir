@@ -19,55 +19,257 @@
 }
 
 
-/* -------- Top-Content -------- */
 
+
+
+/* -------- Top-Content -------- */
 
 #top-content {
     width: 100%; 
     height: 225px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     margin-top: 81px;
-    background-color: var(--primary-color);
-    padding: 0px 75px 0px 75px;
+    background-color: var(--body-color);
+    padding: 50px 200px 50px 200px;
+}
+
+#top-content form{
+    width: 100%;
+}
+
+#upper-filtration{
+    display:flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px 0px 5px 0px;
+}
+
+#trip-section{
+    width: 200px;
+    height: 100%;
+    margin-right: 5px;
+}
+
+#class-section {
+    width: 200px;
+    height: 100%;
+}
+
+#origin-city-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 100%;
+    margin-right: 5px;
+}
+
+#passenger-section{
+    width: 200px;
+    height: 100%;
+    margin-right: 5px;
+}
+
+#trip-search{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#class-search{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#passenger-search{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
 }
 
 
-/* -------- Filtration -------- */
+/* -------- Lower-Filtration -------- */
 
+
+#lower-filtration {
+    display: flex;
+    width: 100%;
+    padding: 5px 0px 5px 0px;
+}
+
+#origin-city-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:33%;
+    height: 100%;
+    margin-right: 5px;
+}
+
+.search-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--section-color);
+    color: var(--primary-color);
+    border-radius: 5px 0px 0px 5px;
+    font-size: 20px;
+}
+
+#destination-city-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 100%;
+    margin-right: 5px;
+}
+
+#departure-date-section {
+    width: 33%;
+    height: 100%;
+    margin-right: 5px;
+}
+
+#search-section {
+    width:50px;
+    height: 100%;
+}
+
+#origin-city-search{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#destination-city-search {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#departure-date-search {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    outline: none !important;
+    padding: 0px 20px 0px 20px;
+}
+
+
+#search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+}
+
+#search-button a{
+    color: var(--section-color);
+    font-size: 25px;
+}
+
+
+/* -------- Select2 Styling -------- */
+
+
+.select2-selection__rendered {
+    line-height: 50px !important;
+   
+}
+.select2-container .select2-selection--single {
+    height: 50px !important;
+    border: none !important;
+    border-radius: 0px 5px 5px 0px !important;
+}
+.select2-selection__arrow {
+    height: 50px !important;
+}
+
+.no-search .select2-search {
+    display: none !important;
+    width: 0px !important;
+    height: 0px !important;
+}
+
+.no-search-two .select2-container--open{
+    display: none !important;
+    width: 0px !important;
+    height: 0px !important;
+}
+
+
+
+/* -------- Create Flight Offer Button -------- */
+
+
+.main {
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 300px 0px;
+}
 
 #create-div {
-    display: flex;
-    align-items: flex-end;
-    height: contain;
-    padding: 15px;
-    margin: 30px;
+    padding: 0px 50px 50px 50px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 }
 
-#create-icon-holder {
+#inside-create-div {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    width: 100px;
-    background-color: var(--section-color);
-    border: 5px solid;
-    border-color: var(--secondary-color);
-    font-size: 40px;
-    text-decoration: none;
 }
 
+#create-div a {
+    display: flex;
+    background-color: var(--primary-color);
+    align-items: center;
+    text-decoration: none;
+    color: var(--section-color);
+}
+
+#create-div p{
+    margin: 0px 0px 0px 5px;
+}
+
+#create-separator{
+    width: 85%;
+    border: 1px solid;
+    border-color: var(--text-color);
+}
+
+#manage-part-create {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px 5px 10px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 2px;
+    border: 3px solid;
+    border-color: var(--primary-color)
+}
 
 /* -------- Offer Panels -------- */
 
 
-.main{
-    width: 100%;
-    height: 100%;
-    padding: 0px 0px 200px 0px;
-}
+
 
 #offers-section{
     display: flex;
@@ -77,7 +279,7 @@
     height: 100%;
 }
 
-.offer-panel{
+.offer-panel {
     display: flex;
     width: 1000px;
     height: 200px;
@@ -85,6 +287,7 @@
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    box-shadow: 0px 10px 10px #707070;
 }
 
 .main-info{
@@ -105,7 +308,11 @@
 .comp-img{
     width: 80px;
     height: 80px;
-    background-color: red;
+}
+
+.comp-img img{
+    width: 100%;
+    height: 100%;
 }
 
 .places-dates{

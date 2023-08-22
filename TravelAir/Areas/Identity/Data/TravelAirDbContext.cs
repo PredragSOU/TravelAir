@@ -13,11 +13,21 @@ public class TravelAirDbContext : IdentityDbContext<ApplicationUser>
     {
     }
 
+
     public DbSet<FlightOffer> FlightOffers { get; set; }
 
     public DbSet<AppUserFlightOffer> AppUserFlightOffers { get; set; }
 
     public DbSet<CabinClass> CabinClasses { get; set; }
+
+    public DbSet<Company> Companies { get; set; }
+
+    public DbSet<Airport> Airports { get; set; }
+
+    public DbSet<City> Cities { get; set; }
+
+    public DbSet<Country> Countries { get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

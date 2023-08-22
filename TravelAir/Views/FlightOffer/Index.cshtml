@@ -1,26 +1,79 @@
 ﻿@model IEnumerable<TravelAir.Models.FlightOffer>
 
 <head>
+
     <link rel="stylesheet" href="~/css/flight-offer-index.css" asp-append-version="true" />
-     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href="~/lib/select2/css/select2.min.css" rel="stylesheet" />
+
+
+
+
 </head>
 
+@section Scripts
+{
+    <script src="~/lib/select2/js/select2.full.min.js"></script>
+    <script src="~/js/select2.js"></script>
+
+    <script src="~/js/select2-inputs.js"></script>
+
+
+
+}
+
+
 <div id = "top-content">
-
-
-
+    <form method = "post" asp-controller="FlightOffer" asp-action="Index">
+        <div id = "upper-filtration">
+            <div id = "trip-section">
+                <select id = "trip-search" class ="simpleSelect2"></select>
+            </div>
+            <div id = "class-section">
+                <select id = "class-search" asp-items = "ViewBag.CC" class ="simpleSelect2" name = "searchCabinClass"></select>
+            </div>
+            <div id = "passenger-section">
+                <select id = "passenger-search" class ="simpleSelect2"></select>
+            </div>
+        </div>
+        <div id = "lower-filtration">
+            <div id = "origin-city-section">
+                <i class = "fa-solid fa-tree-city search-icons"></i>
+                <select id = "origin-city-search" asp-items="ViewBag.OC" name = "searchOriginCities" ></select>
+            </div>
+             <div id = "destination-city-section">
+                <i class = "fa-solid fa-arrow-right-to-city search-icons"></i>
+                <select id = "destination-city-search" asp-items="ViewBag.OC" name = "searchDestinationCities"></select>
+            </div>
+             <div id = "departure-date-section">          
+                <input type="date" name = "searchDepartureDate" id="departure-date-search" class = "border-0"/>
+            </div>
+            <div id = "search-section">
+                        
+                        <input type="submit" id = "search-button" value = "Search" />  
+            </div>
+        </div>
+    </form>
 </div>
 
-
- 
 <div class = "main">
 
-    <div id = "create-div">
-        <a id = "create-icon-holder" asp-action = "Create"><i class='bx bxs-plus-circle icon'></i></a>  
-    </div>
+     <div id = "create-div">
+            <div id = "create-separator"></div>
+            <div id = "inside-create-div">  
 
-      <div id = "offers-section">
-           @foreach(var item in Model){
+                
+                <div id = "manage-part-create">
+                     <a id = "create-icon-holder" asp-action = "Create">CREATE A NEW OFFER</a>       
+                </div>        
+            </div>
+        </div>
+     
+    <div id = "offers-section">
+
+       
+
+            @foreach(var item in Model){
 
             <div class = "offer-panel">
 
@@ -28,19 +81,18 @@
 
                     <div class = "comp-part">
                         <div class = "comp-img">
-                            <img>
+                             <img decoding="async" src=@Url.Content("~/images/company/" + item.Company.ImageName)   asp-append-version="true"/>
                         </div>
                        
-                        <span>Company Name</span>
+                        <span>@item.Company.Name</span>
                     </div>
 
                     <div class = "places-dates">
                         <span class = "places">
-                            @Html.DisplayFor(modelItem => item.Origin)&nbsp-
-                            @Html.DisplayFor(modelItem => item.Destination)
+                            @Html.DisplayFor(modelItem => item.OriginCity) &nbsp-&nbsp @Html.DisplayFor(modelItem => item.DestinationCity)
                         </span>
                         <span>
-                            @Html.DisplayFor(modelItem => item.DepartureDate.TimeOfDay)
+                            @Html.DisplayFor(modelItem => item.DepartureDate.TimeOfDay) &nbsp-&nbsp @Html.DisplayFor(modelItem => item.ReturnDate.TimeOfDay)
                         </span>           
                     </div>
 
@@ -82,11 +134,7 @@
             </div>
 
         }
-      </div>
-
-       
-
-
+    </div>
 
 </div>
 
